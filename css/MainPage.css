@@ -1,0 +1,166 @@
+/* CSS file styling the main page */
+
+/* CSS block for desktop */
+@media (min-width: 700px) {
+
+    /* layout for desktop */
+    #container {
+        grid-template-areas: 
+            "welcome quote"
+            "pictures pictures"
+            "findInsTitle inspireTitle"
+            "findIns inspire"
+            "articles articles";
+        grid-template-columns: 50% 50%;
+    }
+
+    #recipePictures {
+        width: 200%;
+    }
+
+    #recipePictures img {
+        width: 13%;
+    }    
+
+    #articleItem {
+        width: 19%;
+    }
+}
+
+/* CSS block for tablets and mobiles */
+@media (max-width: 700px) {
+    
+    /* layout for tablets and mobiles */
+    #container {
+        grid-template-areas: 
+            "welcome"
+            "pictures"
+            "quote"
+            "findInsTitle"
+            "findIns"
+            "inspireTitle"
+            "inspire"
+            "articles";
+        grid-template-columns: 100%;
+    }
+
+    #recipePictures {
+        width: 100%;
+    }
+
+    /* hiding first and last picture because there is not enough space for 7 pictures in a row */
+    #pic1, #pic7 {
+        display: none;
+    }
+
+    #recipePictures img {
+        width: 18%;
+    }
+
+    #articleItem {
+        width: 44%;
+    }
+}
+
+#app {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #002902;
+}
+
+#container {
+    display: grid;
+    padding: 4%;
+}
+
+#welcome {
+    grid-area: welcome;
+    align-content: flex-start;
+}
+
+#logo-picture {
+    width: 20%;
+}
+
+#quote {
+    grid-area: quote;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+#pictures {
+    grid-area: pictures;
+}
+
+#recipePictures {
+    display: flex;
+    justify-content: space-between;
+}
+
+#findInspirationTit {
+    grid-area: findInsTitle;
+}
+
+#findInspiration {
+    grid-area: findIns;
+    margin-top: -1%
+}
+
+#inspireOthersTit {
+    grid-area: inspireTitle;
+    justify-self: flex-end;
+}
+
+#inspireOthers {
+    grid-area: inspire;
+    justify-self: right;
+    margin-top: -1%;
+}
+
+#articles {
+    grid-area: articles;
+}
+
+#articleItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#articleItem {
+    background-color: #00290236;
+    border-color: #002902c5;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: thin;
+    padding: 0% 2%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+#articleItem img {
+    width: 100%;
+}
+
+#articleItem p {
+    font-size: 90%;
+}
+
+p {
+    font-size: 110%;
+}
+
+#showArticle {
+    padding: 4%;
+}
+
+#showArticle p {
+    font-size: 120%;
+}
+
+#showArticle button {
+    background-color: #e5f7bff9;
+    border-width: thin;
+    border-radius: 3px;
+    padding: 0.5% 1%;
+    cursor: pointer;
+}

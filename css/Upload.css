@@ -1,0 +1,126 @@
+/* CSS file styling the upload form on the recipes page */
+
+#form {
+    display: grid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #002902;
+}
+
+@media (min-width: 0px) {
+    #form {
+        grid-template-areas: "heading"
+                             "name"
+                             "type"
+                             "time"
+                             "ingredients"
+                             "recipe"
+                             "photos"
+                             "uploadRecipe";
+    }
+
+    #recipeInput {
+        resize: vertical;
+        height: 300px;
+    }
+}
+
+@media (min-width: 400px) {
+    #form {
+        grid-template-areas: "heading heading"
+                             "name recipe"
+                             "type recipe"
+                             "time recipe"
+                             "ingredients recipe"
+                             "photos uploadRecipe";
+        grid-template-columns: 45% 55%;
+    }
+
+    #recipe {
+        margin-left: 10%;
+    }
+
+    #recipeInput {
+        resize: vertical;
+        height: 400px;
+    }
+}
+
+#name {
+    grid-area: name;
+}
+
+#type {
+    grid-area: type;
+}
+
+#recipe {
+    grid-area: recipe;
+}
+
+#time {
+    grid-area: time;
+}
+
+#ingredients {
+    grid-area: ingredients;
+}
+
+#ingredients p {
+    font-size: 85%;
+}
+
+#photos {
+    grid-area: photos;
+}
+
+#uploadRecipe {
+    grid-area: uploadRecipe;
+    justify-self: right;
+    margin-right: 8%;
+    margin-top: 5%;
+}
+
+#nameInput, #timeInput, #ingredientsInput, #recipeInput {
+    width: 95%;
+    align-self: center;
+    align-items: center;
+    border-radius: 4px;
+    padding-left: 1%;
+    background-color: #0b4f0530;
+    border-color: #0b4f05;
+    border-style: solid;
+    border-width: thin;
+    font-size: 120%;
+}
+
+#nameInput, #timeInput, #ingredientsInput {
+    height: 30px;
+}
+
+#recipeInput {
+    resize: vertical;
+}
+
+#uploadButton {
+    border: none;
+    padding: 20%;
+    margin-top: 5%;
+    font-size: 130%;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #ddefab;
+    background-color:#1c7e13bb;
+    box-shadow: 0px 2px 4px #0b4f056f;
+    cursor: pointer;
+}
+
+#addPhotos {
+    background-color:#0b4f054e;
+    box-shadow: 1px 1.5px 3px #0b4f056f;
+    color: #0b4f05;
+    border-radius: 1px;
+    border-color: #0b4f05;
+    border-style: solid;
+    border-width: thin;
+    padding: 1%;
+}

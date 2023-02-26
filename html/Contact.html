@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>InspiRecipes</title>
+        <link rel="stylesheet" href="../css/Contact.css">
+        <link rel="stylesheet" href="../css/Styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div id="app">
+
+            <!-- Top navigation menu -->
+            <div id="menu">
+                
+                <!-- InspiRecipes logo -->
+                <a id="logo" href="index.html"><img id="logo-img" src="../Pictures/InspiRecipes.png" /></a>
+
+                <!-- Navigation buttons -->
+                <ul id="nav">
+                    <li id="firstLi"><a href="index.html">MAIN PAGE</a></li>
+                    <li><a href="Recipes.html">RECIPES</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
+                </ul>
+
+                <!-- Search bar with search button -->
+                <div class="input" id="search-input">
+                    <input type="search" class="form-control" id="searchbar"
+                            placeholder="Search">
+
+                    <img id="button-picture" src="../Pictures/SearchI.png" alt="search" onclick=""/>
+                </div>
+
+                <!-- Buton for uploading recipes -->
+                <button id="upload" onclick="window.location.href='Recipes.html';">UPLOAD YOUR RECIPE</button>
+
+                <!-- Avocado picture -->
+                <img id="avocado" src="../Pictures/avocado.png">
+            </div>
+
+            <!-- Contact page content -->
+            <div id="container">
+                
+                <!-- Author's info -->
+                <div id="personalInfo">
+                    <h1 id="name">Name Surname</h1>
+                    <img id="profilePicture" src="../Pictures/profile.png" />
+                    <p id="info">
+                        <h3>Address 123</h3>
+                        <h3>email.address@gmail.com</h3>
+                        <h3>0491 234 567</h3>
+                        <h3>name.surname</h3>
+                        <h3>name.surname<h3>
+                    </p>
+                </div>
+
+                <!-- Contact form -->
+                <div id="contact">
+                
+                    <!-- Heading -->
+                    <h1>Contact me</h1>
+
+                    <!-- Mail form -->
+                    <h2>Your e-mail:</h2>
+                    <input class="form-control" id="mail" v-model="newMail">
+
+                    <!-- Message form -->
+                    <h2>Message:</h2>
+                    <textarea class="form-control" id="message" v-model="newMessage"></textarea>
+                    <br>
+
+                    <!-- Send button -->
+                    <button id="send" v-on:click="addMail">Send</button>
+
+                    <!-- Confirm message after sending a message -->
+                    <p id="confirm" v-show="confirm"> 
+                        Your message: '{{ messages[messages.length - 1].message }}' has been successfully
+                        send. You will get an answer to your e-mail {{ messages[messages.length - 1].mail }}
+                        in a few days.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="../vue/contact.vue"></script>
+
+    </body>
+
+</html>
